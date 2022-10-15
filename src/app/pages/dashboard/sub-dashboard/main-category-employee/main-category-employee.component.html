@@ -10,7 +10,7 @@
         <nb-card-body>
             <div class="row">
                 <div class="col-6" *ngFor="let item of MainCategorySource">
-                    <nb-card status="success" (click)="subcategory(item.cid)">
+                    <nb-card (click)="subcategory(item.cid)">
                         <nb-card-header>
                            {{item.categoryName}}
                         </nb-card-header>

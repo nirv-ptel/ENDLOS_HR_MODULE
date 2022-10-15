@@ -1,0 +1,23 @@
+
+
+<div class="row">
+    <nb-card>
+        <nb-card-header>Total Employee {{SubCategoryDetails.categoryName}}
+            <button type="button" (click)="dismiss()" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </nb-card-header>
+        <nb-card-body>
+            <div class="row">
+                <div class="col-6" *ngFor="let item of SubCategory">
+                    <nb-card status="success" size="tiny">
+                        <nb-card-header>
+                           {{item.categoryName}}
+                        </nb-card-header>
+                        <nb-card-body>aa</nb-card-body>
+                    </nb-card>
+                </div>
+            </div>
+        </nb-card-body>
+    </nb-card>
+</div>

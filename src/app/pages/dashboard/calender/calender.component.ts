@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NbDialogRef, NbDialogService } from '@nebular/theme';
 import { LoginService } from '../../../@service/auth/login.service';
 
@@ -13,6 +13,8 @@ export class CalenderComponent implements OnInit {
   admin: boolean = false;
   CalenderForm: FormGroup;
   @Input() EventDate: string;
+
+  event: any;
   constructor(
     protected ref: NbDialogRef<CalenderComponent>,
     private dialogService: NbDialogService,
@@ -27,11 +29,10 @@ export class CalenderComponent implements OnInit {
     }
 
     this.CalenderForm = this.fb.group({
-      title: [null],
-      date: [null],
-      color: [null]
+      title: [null, Validators.required],
+      date: [this.EventDate],
+      color: ["#81a781", Validators.required]
     })
-    console.warn(this.EventDate);
   }
 
   dismiss() {
@@ -39,7 +40,8 @@ export class CalenderComponent implements OnInit {
 }
 
   onCalenderFormSubmit() {
-
+    this.event = this.CalenderForm.value;
+    this.ref.close( this.CalenderForm.value);
   }
 
 }

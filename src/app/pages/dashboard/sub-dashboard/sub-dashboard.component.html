@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-3">
+        <nb-card status="success" (click)="categoryOpenSalary()">
+            <nb-card-header>
+                <h1>Total Salary</h1>
+            </nb-card-header>
+            <nb-card-body>
+                aa
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-3">
+        <nb-card status="success" (click)="categoryOpenEmployee()">
+            <nb-card-header>
+                <h1>Total Employee</h1>
+            </nb-card-header>
+            <nb-card-body>
+                aa
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-3">
+        <nb-card status="success">
+            <nb-card-header>
+                <h1></h1>
+            </nb-card-header>
+            <nb-card-body>
+                aa
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-3">
+        <nb-card status="success">
+            <nb-card-header>
+                <h1></h1>
+            </nb-card-header>
+            <nb-card-body>
+                aa
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <nb-card>
+            <nb-card-header>Compensation Graph
+                <nb-select class="float" selected="Total">
+                    <nb-option value="Total">Total</nb-option>
+                    <nb-option value="Category">Category</nb-option>
+                    <nb-option value="Sub Category">Sub Category</nb-option>
+                </nb-select>
+            </nb-card-header>
+            <nb-card-body>
+                <canvas id="canvas" #screen></canvas>
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-4">
+        <nb-card>
+            <nb-card-header>New Hires VS termination
+
+            </nb-card-header>
+            <nb-card-body>
+                <canvas id="canvas1" #screen></canvas>
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-4">
+        <nb-card>
+            <nb-card-header>Attendance Report
+
+            </nb-card-header>
+            <nb-card-body>
+                <canvas id="canvas2" #screen></canvas>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

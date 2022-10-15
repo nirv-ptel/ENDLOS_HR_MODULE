@@ -60,7 +60,6 @@ export class CreateUserComponent implements OnInit {
     })
 
     this._mainCategory.ViewMainCategory().subscribe((data: any) => {
-      console.warn(data.Data);
       this.MainCategorySource = data.Data;
 
     })
@@ -96,9 +95,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   onUserFormSubmit() {
-    console.warn(this.UserForm.value);
     this._user.CreateUser(this.UserForm.value).subscribe((data: any) => {
-      console.warn(data);
       this.UserForm.reset();
       this.allAlert('success', `${data.username} Created !`, 'Successfully Created User');
     },

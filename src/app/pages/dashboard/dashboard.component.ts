@@ -27,15 +27,15 @@ export class DashboardComponent implements OnInit, OnDestroy {
   events: any =
     [
       {
-        title: "Long Event",
-        start: "2022-10-10",
-        end: "2022-10-15", background: "linear-gradient(90deg, pink 80%, cyan 0%)"
+        title: "DIWALI",
+        start: "2022-11-21",
+        end: "2022-11-30", background: "linear-gradient(90deg, pink 80%, cyan 0%)"
       },
-      { title: 'absent', date: '2022-10-06', color: '#ff00ff' },
-      { title: 'aaaabsent', date: '2022-10-06', color: '#ff00ff' },
-      { title: 'vvvvv', date: '2022-10-06', color: '#ff00ff' },
-      { title: 'wwwww', date: '2022-10-06', color: '#ff00ff' },
-      { title: 'Present', date: '2022-10-07', color: '#0000ff' },
+      { title: 'absent', date: '2022-11-09', color: '#ff00ff' },
+      { title: 'aaaabsent', date: '2022-11-09', color: '#ff00ff' },
+      { title: 'vvvvv', date: '2022-11-08', color: '#ff00ff' },
+      { title: 'wwwww', date: '2022-11-08', color: '#ff00ff' },
+      { title: 'Present', date: '2022-11-07', color: '#0000ff' },
     ]
 
   PresentDay: number = 0;

@@ -52,7 +52,6 @@ export class ViewUserComponent implements OnInit {
 
   btnClick(event) {
     this.leaveEditUser = event;
-    // this.leaveEdit = true;
   }
 
 
@@ -89,17 +88,6 @@ export class ViewUserComponent implements OnInit {
   }
   openUsetTimeDetails(event) {
     this._router.navigateByUrl(`pages/user/one-user/${event}`);
-    // this.NbDialogRef = this.dialogService.open(
-    //   UserTimeSheetComponent,
-    //   {
-    //     context: {
-    //       UserId: event
-    //     },
-    //     closeOnBackdropClick: false,
-    //   }).onClose.subscribe((data) => {
-    //     this.ngOnInit();
-    //   }
-    //   )
   }
 
 }

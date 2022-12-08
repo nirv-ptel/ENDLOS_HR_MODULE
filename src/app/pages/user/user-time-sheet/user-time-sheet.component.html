@@ -11,11 +11,11 @@
 
 <nb-card>
     <nb-card-header>
-        {{this.UserDetailsName.Username}}&nbsp;&nbsp; - &nbsp;&nbsp;{{this.UserDetailsName.UserMaincategory}}&nbsp;&nbsp; - &nbsp;&nbsp;{{this.UserDetailsName.UserSubcategory}}
+        {{this.UserDetailsName.Username}}&nbsp;&nbsp; -
+        &nbsp;&nbsp;{{this.UserDetailsName.UserMaincategory}}&nbsp;&nbsp; -
+        &nbsp;&nbsp;{{this.UserDetailsName.UserSubcategory}}
     </nb-card-header>
     <nb-card-body>
-        <!-- <input nbInput type="month" /> -->
-
         <form [formGroup]="UserTimeForm" (ngSubmit)="onUserTimeFormSubmit()">
             <div class="col-3">
                 <div class="form-group">
@@ -27,7 +27,7 @@
             <div formArrayName="datas">
                 <div *ngFor="let party of AddTimeGet.controls; let i = index">
                     <div class="row" [formGroupName]="i">
-                        
+
                         <div class="col-1">
                             <div class="form-group">
                                 <label for="date-{{i}}" class="label">date</label>
@@ -38,28 +38,28 @@
                             <div class="form-group">
                                 <label for="inTime-{{i}}" class="label">inTime</label>
                                 <input type="time" nbInput fullWidth id="inTime-{{i}}" placeholder="inTime"
-                                    formControlName="inTime" (keyup)="timezone(i)"/>
+                                    formControlName="inTime" (keyup)="timezone(i)" />
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="form-group">
                                 <label for="exitTime-{{i}}" class="label">exitTime</label>
                                 <input type="time" nbInput fullWidth id="exitTime-{{i}}" placeholder="exitTime"
-                                    formControlName="exitTime" (keyup)="timezone(i)"/>
+                                    formControlName="exitTime" (keyup)="timezone(i)" />
                             </div>
                         </div>
-                        
+
                         <div class="col-3">
                             <div class="form-group">
                                 <label for="hours-{{i}}" class="label"> &nbsp;</label>
                                 <h6>{{TotalHours[i]}}</h6>
-                              
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <button nbButton status="success" [disabled]="UserTimeForm.invalid" type="submit">Submit</button>
         </form>
 

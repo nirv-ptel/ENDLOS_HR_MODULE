@@ -17,7 +17,7 @@ export class UserTimeSheetComponent implements OnInit {
   UserTimeForm: FormGroup;
   SalaryForm: FormGroup;
 
-  TotalHours =  [];
+  TotalHours = [];
   constructor(
     // protected ref: NbDialogRef<UserTimeSheetComponent>,
     protected dateService: NbDateService<Date>,
@@ -112,12 +112,11 @@ export class UserTimeSheetComponent implements OnInit {
     let inTime = this.UserTimeForm.value.datas[event].inTime;
     let exitTime = this.UserTimeForm.value.datas[event].exitTime;
     if (inTime != null && exitTime != null) {
-      inTime = inTime.replace(":", "."); 
-      exitTime = exitTime.replace(":", "."); 
+      inTime = inTime.replace(":", ".");
+      exitTime = exitTime.replace(":", ".");
       let time = exitTime - inTime;
-      console.warn(Math.floor( time ));
+      console.warn(Math.floor(time));
       this.TotalHours[event] = Math.floor(time);
-      // this.AddTimeGet.at(event).get('hours').setValue(Math.floor(time));
     }
 
   }
@@ -153,9 +152,7 @@ export class UserTimeSheetComponent implements OnInit {
       })
     }
   }
-  // dismiss() {
-  //   this.ref.close();
-  // }
+
   allAlert(alertMsg, headMsg, msg) {
     const config = {
       status: alertMsg,

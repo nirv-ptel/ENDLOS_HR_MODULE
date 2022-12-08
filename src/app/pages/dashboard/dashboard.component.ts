@@ -103,9 +103,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
         }
       }
       )
-    // let event =  { title: 'Present', date: arg.dateStr}
-    // this.events.push(event);
-  }
+   }
   demo() {
     pdfFonts.fonts = {
       demo: {

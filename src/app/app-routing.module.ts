@@ -1,13 +1,5 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import {
-	NbAuthComponent,
-	NbLoginComponent,
-	NbLogoutComponent,
-	NbRegisterComponent,
-	NbRequestPasswordComponent,
-	NbResetPasswordComponent,
-} from '@nebular/auth';
 import { AuthGuard } from './auth/guard/auth.guard';
 
 export const routes: Routes = [

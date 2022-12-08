@@ -7,9 +7,6 @@
         </div>
       </nb-card-header>
       <nb-card-body>
-        <!-- <ng2-smart-table [settings]="settings" [source]="MainCategorySource">
-                </ng2-smart-table> -->
-
         <table class="table">
           <thead>
             <tr>
@@ -38,7 +35,8 @@
               <td>{{sub.categoryName}}</td>
               <td><button nbButton (click)="SubCategoryDetails(sub.sub_c_id, dialog1)">Add Details</button>
                 <i class="fa-solid fa-pen" title="Edit"></i>
-                        <i class="fa-solid fa-trash" title="Delete"></i></td>
+                <i class="fa-solid fa-trash" title="Delete"></i>
+              </td>
             </tr>
   </div>
   </tr>
@@ -54,46 +52,9 @@
     </nb-select>
   </div>
 
-  <!-- <table mat-table [dataSource]="dataSource" class="table">
-    <ng-container matColumnDef="categoryName">
-      <th mat-header-cell *matHeaderCellDef>
-        <span [style.paddingLeft.px]="40"> Category Name </span>
-      </th>
-      <td mat-cell *matCellDef="let data">
-        <button
-          mat-icon-button
-          [style.visibility]="!data.expandable ? 'hidden' : ''"
-          [style.marginLeft.px]="data.level * 32"
-          (click)="treeControl.toggle(data)"
-        >
-          <mat-icon class="mat-icon-rtl-mirror">
-            {{treeControl.isExpanded(data) ? 'expand_more' : 'chevron_right'}}
-          </mat-icon>
-        </button>
-        {{data.categoryName}}
-      </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="action">
-      <th mat-header-cell *matHeaderCellDef>Action</th>
-      <td mat-cell *matCellDef="let data"><button nbButton (click)="demo(data)">submit</button></td>
-    </ng-container> 
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table> -->
-
   </nb-card-body>
   </nb-card>
 </div>
-<!-- <div class="col-md-12">
-  <nb-card>
-    <nb-card-body>
-      <ng2-smart-table [settings]="settings" [source]="MainCategorySource">
-      </ng2-smart-table>
-    </nb-card-body>
-  </nb-card>
-</div> -->
 </div>
 
 <ng-template #dialog let-ref="dialogRef">

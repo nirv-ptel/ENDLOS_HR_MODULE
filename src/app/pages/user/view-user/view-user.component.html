@@ -29,7 +29,9 @@
                     <td>{{item.subCategorys == null ? "-" : item.subCategorys.categoryName}}</td>
                     <td (dblclick)="btnClick(item.userId)">
                         <p *ngIf="!leaveEdit ">{{item.leaveBalance == null ? "-" : item.leaveBalance}}</p>
-                    <p *ngIf="leaveEdit && leaveEditUser == item.userId"><input type="text" nbInput value="{{item.leaveBalance}}"/></p> </td>
+                        <p *ngIf="leaveEdit && leaveEditUser == item.userId"><input type="text" nbInput
+                                value="{{item.leaveBalance}}" /></p>
+                    </td>
                     <td></td>
                     <td>{{item.salary == null ? "-" : item.salary}}</td>
                     <td>
